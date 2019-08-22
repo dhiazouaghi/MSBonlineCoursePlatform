@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+                name="studentloginviewmodel"
+                type="android.example.msbonlineregistrationplatform.students.StudentLoginViewModel" />
+    </data>
+
+    <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:background="@drawable/msb"
+            tools:context=".students.StudentLogin"
+    >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="MSB Online Course Registration"
+                android:id="@+id/etUniv"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif" />
+
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etEmail"
+                android:hint="Email"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="143dp"
+                android:textColor="#D3D3D3"
+                android:textColorHint="#D3D3D3"
+                android:textSize="20sp"/>
+
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/etPassword"
+                android:hint="Password"
+                android:layout_below="@+id/etEmail"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="56dp"
+                android:textColor="#D3D3D3"
+                android:textColorHint="#D3D3D3"
+                android:textSize="20sp" />
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_alignParentEnd="true"
+                android:gravity="center|bottom"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+                android:textStyle="normal|bold">
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Login"
+                    android:id="@+id/bLogin"
+
+                    android:background="#FFA944"
+                    android:textColor="#ffffff"
+                    android:layout_weight="1"
+            />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
