@@ -1,7 +1,7 @@
 package android.example.msbonlineregistrationplatform.students
 
 
-import android.databinding.DataBindingUtil
+
 
 
 import android.example.msbonlineregistrationplatform.R
@@ -12,6 +12,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 
 import androidx.lifecycle.ViewModelProviders
@@ -38,7 +39,7 @@ class StudentLogin : Fragment() {
 
 
         binding.studentloginviewmodel=viewModel
-       //binding.setLifecycleOwner(this)
+       binding.setLifecycleOwner(this)
   return binding.root
 
 
