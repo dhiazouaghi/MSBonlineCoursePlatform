@@ -1,0 +1,4 @@
+package android.example.msbonlineregistrationplatform.studentsprofiles
+
+class StudentProfilePageViewModelFactory {
+}
