@@ -1,9 +1,6 @@
 package android.example.msbonlineregistrationplatform.students
 
 
-
-
-
 import android.example.msbonlineregistrationplatform.R
 import android.example.msbonlineregistrationplatform.database.OnlineCourseDatabase
 
@@ -20,8 +17,10 @@ import androidx.lifecycle.ViewModelProviders
 class StudentLogin : Fragment() {
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         // Get a reference to the binding object and inflate the fragment views.
         val binding: StudentLoginBinding = DataBindingUtil.inflate(
@@ -35,13 +34,13 @@ class StudentLogin : Fragment() {
 
         val viewModel =
             ViewModelProviders.of(
-                this, viewModelFactory).get(StudentLoginViewModel::class.java)
+                this, viewModelFactory
+            ).get(StudentLoginViewModel::class.java)
 
 
-        binding.studentloginviewmodel=viewModel
-       binding.setLifecycleOwner(this)
-  return binding.root
-
+        binding.studentloginviewmodel = viewModel
+        //binding.setLifecycleOwner(this)
+        return binding.root
 
 
     }

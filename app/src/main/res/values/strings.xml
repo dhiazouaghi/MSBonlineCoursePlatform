@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">MSB Online Registration Platform</string>
+
+
+    <string name="booki">Mediterranean School Of Business </string>
+    <string name="welcome_back">Welcome Student</string>
+    <string name="read_it_together">Your Courses Registration Platform!</string>
+    <string name="skip">Skip</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="forget_password">Forget Password.?</string>
+
+
+
 </resources>

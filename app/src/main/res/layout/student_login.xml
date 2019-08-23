@@ -11,83 +11,156 @@
     </data>
 
     <RelativeLayout
+                    android:id="@+id/rootView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorBackground"
+                    tools:context="">
 
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingBottom="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:background="@drawable/msb"
-            tools:context=".students.StudentLogin"
-    >
+        <ImageView
+                android:id="@+id/bookIconImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:src="@drawable/white_book_icon" />
 
         <TextView
+                android:id="@+id/bookITextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="MSB Online Course Registration"
-                android:id="@+id/etUniv"
-                android:layout_alignParentTop="true"
+                android:layout_below="@+id/bookIconImageView"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
-                android:textColor="@android:color/holo_blue_dark"
-                android:textSize="30sp"
-                android:fontFamily="sans-serif" />
+                android:layout_marginTop="5dp"
+                android:text="@string/booki"
+                android:textColor="@color/colorSplashText"
+                android:textSize="16sp" />
 
-
-        <EditText
+        <ProgressBar
+                android:id="@+id/loadingProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/etEmail"
-                android:hint="Email"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="143dp"
-                android:textColor="#D3D3D3"
-                android:textColorHint="#D3D3D3"
-                android:textSize="20sp"/>
+                android:layout_height="12dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="-4dp"
+                android:foregroundGravity="bottom"
+                android:indeterminate="true"
+                android:padding="0dp"
+                android:theme="@style/ProgressBarStyle" />
 
-
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/etPassword"
-                android:hint="Password"
-                android:layout_below="@+id/etEmail"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="56dp"
-                android:textColor="#D3D3D3"
-                android:textColorHint="#D3D3D3"
-                android:textSize="20sp" />
-
-
-        <LinearLayout
+        <RelativeLayout
+                android:id="@+id/afterAnimationView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="130dp"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-                android:layout_alignParentEnd="true"
-                android:gravity="center|bottom"
-                android:layout_gravity="center"
-                android:baselineAligned="false"
-                android:textStyle="normal|bold">
+            <TextView
+                    android:id="@+id/WelcomeTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_back"
+                    android:textColor="@color/colorBackground"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/readItTogetherTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/WelcomeTextView"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/read_it_together"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/loginButton"
+                    android:layout_below="@+id/readItTogetherTextView"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:textColor="@color/colorTextView"
+                        android:textColorHint="@color/colorAccent"
+                        android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passwordEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:hint="@string/password"
+                        android:textColor="@color/colorTextView"
+                        android:textColorHint="@color/colorAccent"
+                        android:textSize="15sp" />
+
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sign_up"
+                            android:textColor="@color/colorTextView"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:text="@string/forget_password"
+                            android:textColor="@color/colorTextView"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                </FrameLayout>
+            </LinearLayout>
 
             <Button
-                    android:layout_width="0dp"
+                    android:id="@+id/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_above="@+id/skipTextView"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/button_drawable"
+                    android:text="@string/login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:id="@+id/skipTextView"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:text="Login"
-                    android:id="@+id/bLogin"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="@string/skip"
+                    android:textColor="@color/colorTextView"
+                    android:textSize="15sp" />
 
-                    android:background="#FFA944"
-                    android:textColor="#ffffff"
-                    android:layout_weight="1"
-            />
 
-
-        </LinearLayout>
+        </RelativeLayout>
 
     </RelativeLayout>
 </layout>
