@@ -14,7 +14,7 @@ data class StudentProfile(
     val emails: String = "",
 
     @ColumnInfo(name = "password")
-    var password: Long = 0 ,
+    var password: String = "" ,
 
     @ColumnInfo(name = "student_name")
     var student_name: String = "",

@@ -21,7 +21,7 @@ import java.io.IOException
 
 
 @RunWith(AndroidJUnit4::class)
-class SleepDatabaseTest {
+class TestDatabase {
 
     private lateinit var ocDao: OnlineCourseDatabaseDao
     private lateinit var db: OnlineCourseDatabase
@@ -33,7 +33,7 @@ class SleepDatabaseTest {
 
             .allowMainThreadQueries()
             .build()
-        ocDao= db.OnlineCourseDatabaseDao
+        ocDao= db.OnlineCourseDatabaseDao()
 
     }
 

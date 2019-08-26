@@ -31,8 +31,9 @@ interface OnlineCourseDatabaseDao {
     fun gettheStudent(): StudentProfile?
 
 
-    @Query("SELECT * from students_data WHERE sId = :key")
-    fun getstudentWithId(key: Long): LiveData<StudentProfile>
+    @Query("SELECT * from students_data WHERE email_address = :email AND password= :pass")
+    fun getstudentWithid(email: String, pass:String): LiveData<StudentProfile>
+
 }
 
 
