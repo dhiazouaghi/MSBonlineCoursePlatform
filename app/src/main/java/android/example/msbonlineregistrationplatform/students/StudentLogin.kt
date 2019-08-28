@@ -8,6 +8,7 @@ import android.example.msbonlineregistrationplatform.database.OnlineCourseDataba
 
 import android.example.msbonlineregistrationplatform.databinding.StudentLoginBinding
 import android.os.Bundle
+import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +19,7 @@ import androidx.lifecycle.Observer
 
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
+
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.student_login.*
 
@@ -55,7 +56,8 @@ class StudentLogin : Fragment() {
             viewModel.eventlogin.observe(this, Observer { hasfinished ->
 
             if (hasfinished) {
-                Navigation.createNavigateOnClickListener(R.id.action_studentLogin_to_studentProfilePage)
+
+               findNavController().navigate((StudentLoginDirections.actionStudentLoginToStudentProfilePage()))
                 //viewModel.oncomplete()
             }
 

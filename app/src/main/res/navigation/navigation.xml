@@ -2,15 +2,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
-            app:startDestination="@id/studentLogin">
-    <fragment android:id="@+id/studentLogin"
+            app:startDestination="@id/student_destination">
+    <fragment android:id="@+id/student_destination"
               android:name="android.example.msbonlineregistrationplatform.students.StudentLogin"
-              android:label="StudentLogin"
+              android:label="student_login"
               tools:layout="@layout/student_login">
-        <action android:id="@+id/action_studentLogin_to_studentProfilePage" app:destination="@id/studentProfilePage"/>
+        <action android:id="@+id/action_studentLogin_to_studentProfilePage"
+                app:destination="@+id/student_profile_page_destination"/>
     </fragment>
-    <fragment android:id="@+id/studentProfilePage"
+    <fragment android:id="@+id/student_profile_page_destination"
               android:name="android.example.msbonlineregistrationplatform.studentsprofiles.StudentProfilePage"
-              android:label="StudentProfilePage"
+              android:label="student_profile_page"
               tools:layout="@layout/student_profile_page"/>
 </navigation>
