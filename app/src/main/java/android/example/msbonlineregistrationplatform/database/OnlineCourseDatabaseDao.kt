@@ -1,6 +1,7 @@
 package android.example.msbonlineregistrationplatform.database
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -32,7 +33,9 @@ interface OnlineCourseDatabaseDao {
 
 
     @Query("SELECT * from students_data WHERE email_address = :email AND password= :pass")
-    fun getstudentWithid(email: String, pass:String): LiveData<StudentProfile>
+    fun getstudentWithid(email: String, pass:String): StudentProfile
+
+
 
 }
 

@@ -142,6 +142,7 @@
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/button_drawable"
                     android:text="@string/login"
+                    android:onClick="@{() -> studentloginviewmodel.onlogin()}"
                     android:textAllCaps="false"
                     android:textColor="@color/colorAccent"
                     android:textSize="16sp"

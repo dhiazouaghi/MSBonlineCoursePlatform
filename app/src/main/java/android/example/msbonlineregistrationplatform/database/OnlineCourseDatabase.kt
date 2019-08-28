@@ -29,13 +29,13 @@ abstract class OnlineCourseDatabase : RoomDatabase() {
                         context.applicationContext,
                         OnlineCourseDatabase::class.java,
                         "online_course_database"
-                    )
+                    ).allowMainThreadQueries()
                         .addCallback(object : Callback() {
                             override fun onCreate(db: SupportSQLiteDatabase) {
                                 super.onCreate(db)
                                 // insert the data on the IO Thread
                                 ioThread {
-                                    getInstance(context).OnlineCourseDatabaseDao().insert(StudentProfile(1,"zouaghidhia@gmail.com","12424"))
+                                    getInstance(context).OnlineCourseDatabaseDao().insert(StudentProfile(1,"a","1"))
                                 }
                             }
                         })

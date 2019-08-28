@@ -20,7 +20,7 @@ class StudentProfilePage : Fragment() {
 
         // Get a reference to the binding object and inflate the fragment views.
         val binding: StudentProfilePageBinding = DataBindingUtil.inflate(
-            inflater, R.layout.student_login, container, false
+            inflater, R.layout.student_profile_page, container, false
         )
         return binding.root
     }}
