@@ -14,4 +14,8 @@
               android:name="android.example.msbonlineregistrationplatform.studentsprofiles.StudentProfilePage"
               android:label="student_profile_page"
               tools:layout="@layout/student_profile_page"/>
+    <fragment android:id="@+id/studentCourses2"
+              android:name="android.example.msbonlineregistrationplatform.courses.StudentCourses"
+              android:label="student_courses"
+              tools:layout="@layout/student_courses"/>
 </navigation>
